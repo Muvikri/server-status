@@ -1,4 +1,4 @@
-# server-status
+# Server Status
 
 A simple nodejs based web interface for your home server! this tools includes:
 - **Cpu** and **Temperature** Monitoring
