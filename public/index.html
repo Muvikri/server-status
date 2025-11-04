@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="dashboard">
+        <div class="card tall" id="time">
+            <p id="clock" class="clock">--:--:--</p>
+            <p id="uptime" class="uptime">Uptime: 0h 0m</p>
+        </div>
+
+        <div class="card" id="cpu">
+            <h2>CPU</h2>
+            <div class="gauges">
+                <div class="gauge red">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="0,100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                            class="gauge-text">0%</text>
+                    </svg>
+                </div>
+
+                <div class="gauge blue">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="0,100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                            class="gauge-text">0°C</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="ram">
+            <h2>RAM</h2>
+            <div class="gauges">
+                <div class="gauge green">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            stroke-dasharray="0,100" />
+                        <text class="gauge-text" x="18" y="20" text-anchor="middle">0%</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="disk">
+            <h2>Disk</h2>
+            <div class="progress-bar">
+                <span class="progress-unit">GB</span>
+                <div class="progress-fill">
+                    <span class="progress-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="network">
+            <h2>Network</h2>
+            <p id="netUp">Upload: 0 KB/s</p>
+            <p id="netDown">Download: 0 KB/s</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 Muvikri. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

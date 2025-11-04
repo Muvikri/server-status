@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("backgrounds/background.png") center/cover no-repeat;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    padding: 25px;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    min-height: 160px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.card.tall {
+    grid-row: span 2;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 4px 0;
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .card.tall {
+        grid-row: span 1;
+    }
+
+    .card {
+        min-height: 200px;
+    }
+}
+
+.clock {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.uptime {
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+.gauges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gauge {
+    width: 90px;
+    height: 90px;
+}
+
+.circular-chart {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 4;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.red .circle {
+    stroke: #ff4b4b;
+}
+
+.blue .circle {
+    stroke: #4bb0ff;
+}
+
+.gauge-text {
+    font-size: 0.4rem;
+    fill: white;
+    font-weight: bold;
+}
+
+.gauge.green .circle-bg {
+    stroke-width: 4;
+    fill: none;
+}
+
+.gauge.green .circle {
+    stroke: #4ade80;
+    stroke-width: 4;
+    fill: none;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.gauge.green .gauge-text {
+    font-size: 0.4rem;
+    fill: white;
+    font-weight: bold;
+}
+
+#gauges .gauges {
+    gap: 15px;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.progress-unit {
+    position: absolute;
+    left: 8px;
+    font-size: 0.8rem;
+    color: white;
+    z-index: 2;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #facc15;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    box-sizing: border-box;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.dashboard {
+    padding-bottom: 50px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
