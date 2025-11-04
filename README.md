@@ -9,6 +9,8 @@ A simple and clean nodejs based web interface for your home server! this tools i
 # Screenshots
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3b60bb2c-96cd-4cc5-967c-9bcee4f49230" />
 
+You can see the demo for this tool <a href="https://server-info.fixkr.my.id/">here</a> 
+
 # Background
 You can change the background later in public/backgrounds/background.png
 
