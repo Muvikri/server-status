@@ -1,8 +1,8 @@
 # Server Status
 
 A simple and clean nodejs based web interface for your home server! this tools includes:
-- **Cpu** and **Temperature** Monitoring
-- **Ram** usage persentage monitoring
+- **CPU** and **Temperature** Monitoring
+- **RAM** usage persentage monitoring
 - **Disk** usage Monitoring
 - **Network** usage Monitoring
 
@@ -11,6 +11,9 @@ A simple and clean nodejs based web interface for your home server! this tools i
 
 # Background
 You can change the background later in public/backgrounds/background.png
+
+# Disclaimer
+This tool is only tested in Ubuntu 24.04. I have tested this in Windows and it has many problems. Please consider using an Ubuntu server for this tool to work well.
 
 ## Installation
 ```bash
